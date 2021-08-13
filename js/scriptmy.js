@@ -24,6 +24,22 @@ slidesPerGroup:3,
 spaceBetween: 120,
 
 
+
+breakpoints: {
+"320": {
+   slidesPerView:1, 
+   slidesPerGroup:1,
+},
+"522": {
+   slidesPerView:2, 
+   slidesPerGroup:2,
+   spaceBetween: 100,
+},
+"986": {
+slidesPerView:3, 
+},
+}
+
  });
 
 $(document).ready(function () {
