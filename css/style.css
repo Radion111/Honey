@@ -398,7 +398,7 @@ body {
 .about-product__honeydown {
   position: absolute;
   right: 0px;
-  bottom: -150px;
+  top: -10px;
   z-index: 2;
 }
 
@@ -488,6 +488,7 @@ body {
 .delivery {
   background-color: #f3f3f3;
   position: relative;
+  top: 0px;
   font-family: "Open Sans";
   margin-top: -18px;
 }
@@ -1641,12 +1642,6 @@ body {
   }
 }
 
-@media (max-width: 501px) {
-  .about-product:after {
-    margin-top: 115px;
-  }
-}
-
 @media (max-width: 500px) {
   .header-center__h3 {
     font-size: 24px;
@@ -1662,6 +1657,10 @@ body {
 
   .header-center__maina {
     font-size: 17px;
+  }
+
+  .about-product:after {
+    margin-top: 115px;
   }
 
   .about-product__h4 {
