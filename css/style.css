@@ -1099,27 +1099,44 @@ body {
 
 @media (max-width: 1751px) {
   .compoundandcost__backbottom {
-    display: none;
+    z-index: 1;
+
   }
 }
+@media (max-width: 440px) {
+  .compoundandcost__backbottom {
+   display: none;
 
+  }
+}
 @media (max-width: 1660px) {
   .compoundandcost__backtop {
-    display: none;
+   z-index: 1;
   }
 }
 
+@media (max-width: 440px  ) {
+  .compoundandcost__backtop {
+  display: none;
+  }
+}
 @media (max-width: 1600px) {
   .slidercomment__h4 {
     margin-top: 95px;
   }
 }
 
-@media (max-width: 1480px) {
+@media (max-width: 1470px) {
   .about-product__honey {
-    display: none;
+  bottom: -160px;
   }
 }
+@media (max-width: 1200px) {
+  .about-product__honey {
+   display: none;
+  }
+}
+
 
 @media (max-width: 1290px) {
   .delivery__h4 {
