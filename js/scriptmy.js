@@ -53,24 +53,6 @@ sertificate.addEventListener("click", function sertiFicate(event) {
     .classList.toggle("active");
 });
 
-// Для медленой прокрутки по сайту
-// ! Зделаю потом
-$(document).ready(function () {
-  $(".header-top__a").click(function (e) {
-    e.preventDefault();
-    $("html,body").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top + "px",
-      },
-      {
-        duration: 1000,
-        easing: "linear",
-      }
-    );
-    return false;
-  });
-});
-
 let burgermenu = document.querySelector(".burger-menu");
 burgermenu.addEventListener("click", function burgerMenu() {
   burgermenu.classList.toggle("active");
@@ -94,3 +76,17 @@ function ibg() {
 }
 
 ibg();
+
+let scroll = document.querySelectorAll(".header-top__a");
+
+scroll.forEach((item) => {
+  item.addEventListener("click", function Scrollnear(event) {
+    event.preventDefault();
+    let id = item.getAttribute("href");
+
+    document.querySelector(id).scrollIntoView({
+      block: "center",
+      behavior: "smooth",
+    });
+  });
+});
