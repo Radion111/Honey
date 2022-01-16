@@ -628,7 +628,7 @@
                <div class="comments">
                   <div class="comments__body">
                      <h3 class="comments__h5"> Оставить отзывы</h3>
-                     <form action="get">
+                     <form method="get" action="#">
                         <div class="comments__minirow">
 
                            <input class="comments__name input" type="text" name="name" placeholder="Имя">
@@ -642,8 +642,8 @@
                            <input class="comments__email input" type="email" name="email"
                               placeholder="E-mail(не отображается на сайте)">
 
-                           <input class="comments__number input" type="tel" name="telnumber"
-                              placeholder="Номер телефона (не отображается на сайте)">
+                           <input class="comments__number input" type="tel" max="12" value="380"
+                              name="telnumber" placeholder="Номер телефона (не отображается на сайте)">
 
                         </div>
                         <p><textarea class="comments__textarea input" placeholder="Ваш отзыв о товаре"></textarea></p>

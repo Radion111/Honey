@@ -90,3 +90,69 @@ scroll.forEach((item) => {
     });
   });
 });
+
+//  Для форми
+
+let registration = document.querySelector(".comments__button");
+let password = document.querySelector(".popup-pasword");
+
+// let str = "аааааА23";
+// console.log(/(?=.*[0-9])(?=.*[а-я])(?=.*[А-Я])[0-9а-яА-Я]{6,16}/g.test(str));
+// !интересная конструкция нужно изучить ))) ?=
+
+registration.addEventListener("click", function Check(event) {
+  let name = document.querySelector(".comments__name");
+  let age = document.querySelector(".comments__age");
+  let city = document.querySelector(".comments__city");
+  let textArea = document.querySelector(".comments__textarea");
+  let tel = document.querySelector(".comments__number");
+  let email = document.querySelector(".comments__email");
+  // Для имени
+  if (name.value.length < 3) {
+    event.preventDefault();
+    name.classList.add("active");
+  } else if (name.value.length >= 3) {
+    name.classList.remove("active");
+  }
+  if (age.value.length <= 1) {
+    event.preventDefault();
+    age.classList.add("active");
+  } else if (name.value.length >= 3) {
+    age.classList.remove("active");
+  }
+  if (city.value.length <= 3) {
+    event.preventDefault();
+    city.classList.add("active");
+  } else if (city.value.length >= 3) {
+    city.classList.remove("active");
+  }
+
+  if (textArea.value.length <= 10) {
+    event.preventDefault();
+    textArea.classList.add("active");
+  } else if (tex.value.length >= 3) {
+    textArea.classList.remove("active");
+  }
+
+  if (tel.value.search(/[a-z]/g) != -1 || tel.value.search(/[а-я]/g) != -1) {
+    event.preventDefault();
+    tel.classList.add("active");
+  } else if (tel.value.length != 13) {
+    event.preventDefault();
+    tel.classList.add("active");
+  } else if (
+    tel.value.length == 13 &&
+    (tel.value.search(/[a-z]/g) == -1 || tel.value.search(/[а-я]/g != -1))
+  ) {
+    tel.classList.remove("active");
+  }
+
+  // Для емайла
+
+  if (email.value.search(/\S*\@\w*\.\w*/gim) == -1) {
+    event.preventDefault();
+    email.classList.add("active");
+  } else {
+    email.classList.remove("active");
+  }
+});
