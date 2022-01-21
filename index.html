@@ -642,11 +642,12 @@
                            <input class="comments__email input" type="email" name="email"
                               placeholder="E-mail(не отображается на сайте)">
 
-                           <input class="comments__number input" type="tel" max="12" value="380"
-                              name="telnumber" placeholder="Номер телефона (не отображается на сайте)">
+                           <input class="comments__number input" type="tel" maxlength="12" value="380" name="telnumber"
+                              placeholder="Номер телефона (не отображается на сайте)">
 
                         </div>
-                        <p><textarea class="comments__textarea input" placeholder="Ваш отзыв о товаре"></textarea></p>
+                        <textarea class="comments__textarea input" placeholder="Ваш отзыв о товаре"
+                           name="textarea"></textarea>
 
                         <button class="comments__button" type="submit">Отправить</button>
                      </form>

@@ -130,18 +130,18 @@ registration.addEventListener("click", function Check(event) {
   if (textArea.value.length <= 10) {
     event.preventDefault();
     textArea.classList.add("active");
-  } else if (tex.value.length >= 3) {
+  } else if (textArea.value.length >= 3) {
     textArea.classList.remove("active");
   }
 
   if (tel.value.search(/[a-z]/g) != -1 || tel.value.search(/[а-я]/g) != -1) {
     event.preventDefault();
     tel.classList.add("active");
-  } else if (tel.value.length != 13) {
+  } else if (tel.value.length != 12) {
     event.preventDefault();
     tel.classList.add("active");
   } else if (
-    tel.value.length == 13 &&
+    tel.value.length == 12 &&
     (tel.value.search(/[a-z]/g) == -1 || tel.value.search(/[а-я]/g != -1))
   ) {
     tel.classList.remove("active");
